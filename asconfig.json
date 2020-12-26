@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "source-path": ["src"],
+    "library-path": ["swc"],
+    "load-config": ["obj/WebClientConfig.xml"],
+    "swf-version": 34,
+    "output": "./bin/game.swf"
+  },
+  "mainClass": "WebClient",
+  "config": "flex"
+}

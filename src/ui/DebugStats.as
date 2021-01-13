@@ -7,6 +7,7 @@ package ui {
 	import flash.text.TextFormat;
 	import flash.utils.getTimer;
 	import states.PlayState;
+	import blitter.BlGame;
 
 	public class DebugStats extends TextField {
 		
@@ -66,10 +67,12 @@ package ui {
 		private function updateText():void {
 			text = "";
 			
-			add("Everybody Edits Offline");
+			add("Everybody Edits Offline - TAS v0.1");
 			add("FPS", lastFps.toString());
 			add("Position", "(" + (state.player.x / 16).toFixed(3) + ", " + (state.player.y / 16).toFixed(3) + ")");
 			add("Time", (state.player.ticks / 100).toFixed(2) + "s");
+
+			add("TAS", (BlGame.tasEnabled ? "enabled" : "disabled") + ", " + BlGame.frameNumber);
 			
 			if (Global.reportTextTest != "") 
 				add("Report", Global.reportTextTest);

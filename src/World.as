@@ -775,6 +775,7 @@ package{
 		
 		private var ice:Number = 0;
 		private var iceTime:int = 60;
+		private var frame:int = 0;
 		
 		public var fullImage:BitmapData;
 		public function drawFull():void {

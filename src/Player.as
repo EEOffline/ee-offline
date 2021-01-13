@@ -994,42 +994,42 @@ package
 			var imx:int = _speedX<<8;
 			var imy:int = _speedY<<8;
 			
-			moving = false
-			
-			if(imx != 0 || (ItemId.isLiquid(current) && !isgodmod)){
-				moving = true;
-			}else if(_modifierX < 0.1 && _modifierX > -0.1){ 
-				var tx:Number = x % 16
-				if(tx < 2){
-					if(tx < .2){
-						x >>=0;
-					}else x-= tx/15
-				}else if(tx > 14){
-					if(tx > 15.8){
-						x >>=0;
-						x ++
-					}else x+= (tx-14)/15;
-				}
-				
-			}
-			
-			if(imy != 0 || (ItemId.isLiquid(current) && !isgodmod)){
-				moving = true;
-			}else if(_modifierY < 0.1 && _modifierY > -0.1 ){
-				var ty:Number = y % 16
-				
-				if(ty < 2){
-					if(ty < .2){
-						y >>=0;
-					}else y-= ty/15
-				}else if(ty > 14){
-					
-					if(ty > 15.8){
-						y >>=0;
-						y ++
-					}else y+= (ty-14)/15;
-				}
-			};
+		    moving = false
+		    
+		    if(imx != 0 || (ItemId.isLiquid(current) && !isgodmod)){
+		    	moving = true;
+		    }else if(_modifierX < 0.1 && _modifierX > -0.1){ 
+		    	var tx:Number = x % 16
+		    	if(tx < 2){
+		    		if(tx < .2){
+		    			x >>=0;
+		    		}else x-= tx/15
+		    	}else if(tx > 14){
+		    		if(tx > 15.8){
+		    			x >>=0;
+		    			x ++
+		    		}else x+= (tx-14)/15;
+		    	}
+		    	
+		    }
+		    
+		    if(imy != 0 || (ItemId.isLiquid(current) && !isgodmod)){
+		    	moving = true;
+		    }else if(_modifierY < 0.1 && _modifierY > -0.1 ){
+		    	var ty:Number = y % 16
+		    	
+		    	if(ty < 2){
+		    		if(ty < .2){
+		    			y >>=0;
+		    		}else y-= ty/15
+		    	}else if(ty > 14){
+		    		
+		    		if(ty > 15.8){
+		    			y >>=0;
+		    			y ++
+		    		}else y+= (ty-14)/15;
+		    	}
+		    };
 			
 			updateStuff();
 			

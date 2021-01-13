@@ -183,7 +183,7 @@
 			
 			Global.debug_stats = new DebugStats(this);
 			Global.base.overlayContainer.addChild(Global.debug_stats);
-			Global.debug_stats.visible = false;
+			Global.debug_stats.visible = true;
 			Global.playState = this;
 			
 			Global.stage.frameRate = Config.maxFrameRate;

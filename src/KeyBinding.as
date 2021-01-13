@@ -5,36 +5,40 @@ package {
 		public static var _all:Vector.<KeyBinding> = new Vector.<KeyBinding>();
 		private static var _ref:Array = [];
 		
-		public static var jump:KeyBinding =              _add(25, "Jump", new Key(32));                              // Space
-		public static var up:KeyBinding =                _add(0, "Move Up (alt)", new Key(87), new Key(90));         // W / Z
-		public static var left:KeyBinding =              _add(1, "Move Left (alt)", new Key(65), new Key(81));       // A / Q
-		public static var down:KeyBinding =              _add(2, "Move Down (alt)", new Key(83));                    // S
-		public static var right:KeyBinding =             _add(3, "Move Right (alt)", new Key(68));                   // D
-		public static var godmode:KeyBinding =           _add(4, "Toggle God Mode", new Key(71));                    // G
-		public static var modmode:KeyBinding =           _add(5, "Toggle Mod Mode", new Key(80), null, true);        // P
-		public static var modmodeRow:KeyBinding =        _add(27, "Change Mod Mode Colour", new Key(80, true), null, true); // Shift + P
-		public static var minimap:KeyBinding =           _add(6, "Toggle Minimap", new Key(77));                     // M
-		public static var inspect:KeyBinding =           _add(7, "Toggle Inspect Tool", new Key(73));                // I
-		public static var chat:KeyBinding =              _add(8, "Chat (alt)", new Key(84));                         // T
-		public static var blockbar:KeyBinding =          _add(9, "Show Blocks (held)", new Key(66));                 // B
-		public static var interact:KeyBinding =          _add(10, "NPC Interaction", new Key(67));                   // C (communication with npcs)
-		public static var risky:KeyBinding =             _add(11, "World Interaction", new Key(89));                 // Y (reset block, world portal)
-		public static var decrement:KeyBinding =         _add(12, "Decrement Value", new Key(81), new Key(65));      // Q / A (switches, doors, etc.)
-		public static var increment:KeyBinding =         _add(13, "Increment Value", new Key(69));                   // E (switches, doors, etc.)
-		public static var retryRun:KeyBinding =          _add(26, "Retry Time Trial", new Key(82, true));            // Shift + R
-		public static var hideUsernames:KeyBinding =     _add(14, "Hide Usernames", new Key(85, true));              // Shift + U
-		public static var hideChatBubbles:KeyBinding =   _add(15, "Hide Chat Bubbles", new Key(73, true));           // Shift + I
-		public static var screenshot:KeyBinding =        _add(16, "Screenshot", new Key(66, true));                  // Shift + B
-		public static var screenshotFull:KeyBinding =    _add(17, "Full Screenshot", new Key(78, true), null, true); // Shift + N
-		public static var screenshotMinimap:KeyBinding = _add(18, "Minimap Screenshot", new Key(86, true));          // Shift + V
-		public static var lockCamera:KeyBinding =        _add(19, "Lock Camera", new Key(76, true), null, true);     // Shift + L
-		public static var lookUp:KeyBinding =            _add(20, "Look Up", new Key(72, true), null, true);         // Shift + Y
-		public static var lookLeft:KeyBinding =          _add(21, "Look Left", new Key(74, true), null, true);       // Shift + G
-		public static var lookDown:KeyBinding =          _add(22, "Look Down", new Key(89, true), null, true);       // Shift + H
-		public static var lookRight:KeyBinding =         _add(23, "Look Right", new Key(71, true), null, true);      // Shift + J
-		public static var hideUI:KeyBinding =            _add(24, "Hide UI", new Key(79, true), null, true);         // Shift + O
-		//public static var download:KeyBinding =          _add(27, "Download Level", new Key(67, true), null);        // Shift + C
-		// NEXT: 28
+		public static var jump:KeyBinding =                 _add(25, "Jump", new Key(32));                              // Space
+		public static var up:KeyBinding =                   _add(0, "Move Up (alt)", new Key(87), new Key(90));         // W / Z
+		public static var left:KeyBinding =                 _add(1, "Move Left (alt)", new Key(65), new Key(81));       // A / Q
+		public static var down:KeyBinding =                 _add(2, "Move Down (alt)", new Key(83));                    // S
+		public static var right:KeyBinding =                _add(3, "Move Right (alt)", new Key(68));                   // D
+		public static var godmode:KeyBinding =              _add(4, "Toggle God Mode", new Key(71));                    // G
+		public static var modmode:KeyBinding =              _add(5, "Toggle Mod Mode", new Key(80), null, true);        // P
+		public static var modmodeRow:KeyBinding =           _add(27, "Change Mod Mode Colour", new Key(80, true), null, true); // Shift + P
+		public static var minimap:KeyBinding =              _add(6, "Toggle Minimap", new Key(77));                     // M
+		public static var inspect:KeyBinding =              _add(7, "Toggle Inspect Tool", new Key(73));                // I
+		public static var chat:KeyBinding =                 _add(8, "Chat (alt)", new Key(84));                         // T
+		public static var blockbar:KeyBinding =             _add(9, "Show Blocks (held)", new Key(66));                 // B
+		public static var interact:KeyBinding =             _add(10, "NPC Interaction", new Key(67));                   // C (communication with npcs)
+		public static var risky:KeyBinding =                _add(11, "World Interaction", new Key(89));                 // Y (reset block, world portal)
+		public static var decrement:KeyBinding =            _add(12, "Decrement Value", new Key(81), new Key(65));      // Q / A (switches, doors, etc.)
+		public static var increment:KeyBinding =            _add(13, "Increment Value", new Key(69));                   // E (switches, doors, etc.)
+		public static var retryRun:KeyBinding =             _add(26, "Retry Time Trial", new Key(82, true));            // Shift + R
+		public static var hideUsernames:KeyBinding =        _add(14, "Hide Usernames", new Key(85, true));              // Shift + U
+		public static var hideChatBubbles:KeyBinding =      _add(15, "Hide Chat Bubbles", new Key(73, true));           // Shift + I
+		public static var screenshot:KeyBinding =           _add(16, "Screenshot", new Key(66, true));                  // Shift + B
+		public static var screenshotFull:KeyBinding =       _add(17, "Full Screenshot", new Key(78, true), null, true); // Shift + N
+		public static var screenshotMinimap:KeyBinding =    _add(18, "Minimap Screenshot", new Key(86, true));          // Shift + V
+		public static var lockCamera:KeyBinding =           _add(19, "Lock Camera", new Key(76, true), null, true);     // Shift + L
+		public static var lookUp:KeyBinding =               _add(20, "Look Up", new Key(72, true), null, true);         // Shift + Y
+		public static var lookLeft:KeyBinding =             _add(21, "Look Left", new Key(74, true), null, true);       // Shift + G
+		public static var lookDown:KeyBinding =             _add(22, "Look Down", new Key(89, true), null, true);       // Shift + H
+		public static var lookRight:KeyBinding =            _add(23, "Look Right", new Key(71, true), null, true);      // Shift + J
+		public static var hideUI:KeyBinding =               _add(24, "Hide UI", new Key(79, true), null, true);         // Shift + O
+		//public static var download:KeyBinding =             _add(27, "Download Level", new Key(67, true), null);        // Shift + C
+
+		public static var tasToggle:KeyBinding =            _add(28, "TAS toggle", new Key(187));                // =
+		public static var tasAdvanceFrame:KeyBinding =      _add(29, "TAS advance frame", new Key(219));         // [
+		public static var tasContinuousFrame:KeyBinding =   _add(30, "TAS continuous frame", new Key(221));      // ]
+		// NEXT: 31
 		
 		private static function _add(id:int, name:String, keyDefault:Key, keyAzerty:Key = null, staffOnly:Boolean = false):KeyBinding {
 			var k:KeyBinding = new KeyBinding(id, name, keyDefault, keyAzerty, staffOnly);
@@ -115,5 +119,16 @@ package {
 			return Bl.isKeyJustReleased(key.keyCode as int);
 		}
 		
+		public function resetJustPressed():void
+		{
+			Bl.justPressedKeys[this.key.keyCode] = false;
+		}
+		
+		public function reset():void
+		{
+			Bl.justPressedKeys[this.key.keyCode] = false;
+			Bl.justReleasedKeys[this.key.keyCode] = false;
+			Bl.keys[this.key.keyCode] = false;
+		}
 	}
 }

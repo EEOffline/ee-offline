@@ -450,7 +450,7 @@
             return res;
         }
 		
-		private function joinDownloaded(roomid:String, worldName:String, owner:String, gravity:Number, bgColour:uint, minimap:Boolean, width:int, height:int, joindata:Object = null, trialsMode:Boolean = false, worldSpawn:int = 0):void {
+		public function joinDownloaded(roomid:String, worldName:String, owner:String, gravity:Number, bgColour:uint, minimap:Boolean, width:int, height:int, joindata:Object = null, trialsMode:Boolean = false, worldSpawn:int = 0):void {
 			cleanUIAndConnections();
 			
 			trace("join room", roomid);
@@ -459,6 +459,20 @@
 			trace(getProperties(joindata));
 			trace("-------------------------------------------------------------");
 			
+			BlGame.initTas();
+			BlGame.tasWorld = {};
+			BlGame.tasWorld.roomid = roomid;
+			BlGame.tasWorld.worldName = worldName;
+			BlGame.tasWorld.owner = owner;
+			BlGame.tasWorld.gravity = gravity;
+			BlGame.tasWorld.bgColour = bgColour;
+			BlGame.tasWorld.width = width;
+			BlGame.tasWorld.height = height;
+			BlGame.tasWorld.joindata = joindata;
+			BlGame.tasWorld.trialsMode = trialsMode;
+			BlGame.tasWorld.worldSpawn = worldSpawn;
+			trace("tasWorld", JSON.stringify(tasWorld, null, 2));
+
 			handleJoinDownloaded(roomid, worldName, owner, gravity, bgColour, minimap, width, height, joindata, trialsMode, worldSpawn);
 
 			

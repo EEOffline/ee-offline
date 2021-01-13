@@ -759,6 +759,7 @@ package ui.campaigns {
 			var tempCamps:Array = [];
 			if (!Global.cookie.data.campaignProgress) Global.cookie.data.campaignProgress = new Array();
 			trace("Loading campaigns:");
+
 			for each(var entry:ZipEntry in zip.entries)
             {
                 var entryContent:ByteArray = zip.getInput(entry);

@@ -2091,6 +2091,7 @@ package  {
 		}
 		
 		private function cheatPrompt(neverAllow:Boolean = false):Boolean {
+			return false;
 			if (Bl.data.isCampaignRoom && neverAllow || !Global.playerInstance.canCheat && !neverAllow) {
 				base.showInfo2("System Message", "Cheating is disabled in campaigns."
 				+ (!neverAllow && !trialsMode ? "\nThis cheat will become available upon completion." : ""));

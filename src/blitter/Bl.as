@@ -9,7 +9,7 @@
 	public class Bl	{
 		private static var last:Number = 0;
 		//private static var offset:Number = 0;
-		private static var keys:Object = {};
+		public static var keys:Object = {};
 		public static var justPressedKeys:Object = {};
 		public static var justReleasedKeys:Object = {};
 		private static var mouseDown:Boolean = false;
